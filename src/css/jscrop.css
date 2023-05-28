@@ -1,0 +1,105 @@
+/**
+    CSS for JSCrop project
+    @author Anderson Arruda < anderson@sysborg.com.br >
+**/
+.crop-area{
+    position:relative;
+}
+
+.crop-area img{
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+.crop-area .selector{
+    width: 200px;
+    height: 200px;
+    position:absolute;
+    left: 40px;
+    top: 40px;
+    cursor:grab;
+}
+
+.crop-area .selector:active{
+    cursor:grabbing;
+}
+
+.crop-area .selector .bg{
+    border: 2px dashed #555;
+    background: #000;
+    opacity: 0.2;
+    position:absolute;
+    left: 0;
+    top: 0;
+    bottom:0;
+    right:0;
+}
+
+.crop-area .selector .bg:hover{
+    opacity:0.4;
+}
+
+.crop-area .selector .points{
+    position: absolute;
+    background: #fff;
+    border-radius:50%;
+    width:10px;
+    height:10px;
+}
+
+.crop-area .selector .upper-left{
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    cursor: nw-resize;
+}
+
+.crop-area .selector .upper-right{
+    top:0;
+    right:0;
+    transform: translate(50%,-50%);
+    cursor: ne-resize;
+}
+
+.crop-area .selector .bottom-left{
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%,50%);
+    cursor: sw-resize;
+}
+
+.crop-area .selector .bottom-right{
+    bottom:0;
+    right:0;
+    transform: translate(50%,50%);
+    cursor: se-resize;
+}
+
+.crop-area .selector .mid-left{
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,50%);
+    cursor: w-resize;
+}
+
+.crop-area .selector .mid-right{
+    top:50%;
+    right:0;
+    transform: translate(50%,50%);
+    cursor: e-resize;
+}
+
+.crop-area .selector .mid-top{
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: n-resize;
+}
+
+.crop-area .selector .mid-bottom{
+    bottom:0;
+    right:50%;
+    transform: translate(50%,50%);
+    cursor: s-resize;
+}
